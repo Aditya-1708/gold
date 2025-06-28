@@ -20,7 +20,6 @@ const upload = multer({ storage: storage });
 
 router.post(
   "/newItem",
-  authenticate,
   upload.single("image"),
   async (req, res) => {
     try {
